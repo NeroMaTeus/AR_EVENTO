@@ -1,56 +1,53 @@
-<pre><code>&lt;title&gt;AR Evento&lt;/title&gt;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-&lt;!-- A-***** --&gt;
-&lt;****** src=&quot;https://aframe.io/releases/1.2.0/aframe.min.js&quot;&gt;&lt;/script&gt;
+    <title>AR Evento</title>
 
-&lt;!-- MindAR --&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-<pre><code>&lt;a-scene
-    mindar-image=&quot;imageTargetSrc: ./targets.mind;&quot;
-    color-space=&quot;sRGB&quot;
-    renderer=&quot;colorManagement: true&quot;
-    vr-mode-ui=&quot;enabled: false&quot;
-    device-orientation-permission-ui=&quot;enabled: false&quot;&gt;
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 
-    &lt;!-- C&aacute;mara del celular --&gt;
-    &lt;a-camera
-        position=&quot;0 0 0&quot;
-        look-controls=&quot;enabled: false&quot;&gt;
-    &lt;/a-camera&gt;
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+</head>
 
+<body>
 
-    &lt;!-- ========================= --&gt;
-    &lt;!-- OBRA 1 --&gt;
-    &lt;!-- ========================= --&gt;
+<a-scene
+    mindar-image="imageTargetSrc: ./targets.mind;"
+    color-space="sRGB"
+    renderer="colorManagement: true"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
 
-    &lt;a-****** mindar-image-target=&quot;targetIndex: 0&quot;&gt;
+    <a-camera
+        position="0 0 0"
+        look-controls="enabled: false">
+    </a-camera>
 
-        &lt;a-plane
-            position=&quot;0 0 0&quot;
-            width=&quot;1&quot;
-            height=&quot;0.6&quot;
-            color=&quot;red&quot;&gt;
-        &lt;/a-plane&gt;
+    <a-entity mindar-image-target="targetIndex: 0">
 
-    &lt;/a-entity&gt;
+        <a-plane
+            position="0 0 0"
+            width="1"
+            height="0.6"
+            color="red">
+        </a-plane>
 
+    </a-entity>
 
-    &lt;!-- ========================= --&gt;
-    &lt;!-- **** 2 --&gt;
-    &lt;!-- ========================= --&gt;
+    <a-entity mindar-image-target="targetIndex: 1">
 
-    &lt;a-entity mindar-image-target=&quot;targetIndex: 1&quot;&gt;
+        <a-plane
+            position="0 0 0"
+            width="1"
+            height="0.6"
+            color="blue">
+        </a-plane>
 
-        &lt;a-plane
-            position=&quot;0 0 0&quot;
-            width=&quot;1&quot;
-            height=&quot;0.6&quot;
-            color=&quot;blue&quot;&gt;
-        &lt;/a-plane&gt;
+    </a-entity>
 
-    &lt;/a-entity&gt;
+</a-scene>
 
-&lt;/a-scene&gt;
-</code></pre>
-<div style="color: red">Prueba de Word a HTML - por favor <a href="https://wordtohtml.net/site/payment">Go PRO</a> para obtener el HTML completo.</div>
+</body>
+</html>

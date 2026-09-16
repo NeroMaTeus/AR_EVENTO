@@ -1,0 +1,56 @@
+<pre><code>&lt;title&gt;AR Evento&lt;/title&gt;
+
+&lt;!-- A-***** --&gt;
+&lt;****** src=&quot;https://aframe.io/releases/1.2.0/aframe.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- MindAR --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<pre><code>&lt;a-scene
+    mindar-image=&quot;imageTargetSrc: ./targets.mind;&quot;
+    color-space=&quot;sRGB&quot;
+    renderer=&quot;colorManagement: true&quot;
+    vr-mode-ui=&quot;enabled: false&quot;
+    device-orientation-permission-ui=&quot;enabled: false&quot;&gt;
+
+    &lt;!-- C&aacute;mara del celular --&gt;
+    &lt;a-camera
+        position=&quot;0 0 0&quot;
+        look-controls=&quot;enabled: false&quot;&gt;
+    &lt;/a-camera&gt;
+
+
+    &lt;!-- ========================= --&gt;
+    &lt;!-- OBRA 1 --&gt;
+    &lt;!-- ========================= --&gt;
+
+    &lt;a-****** mindar-image-target=&quot;targetIndex: 0&quot;&gt;
+
+        &lt;a-plane
+            position=&quot;0 0 0&quot;
+            width=&quot;1&quot;
+            height=&quot;0.6&quot;
+            color=&quot;red&quot;&gt;
+        &lt;/a-plane&gt;
+
+    &lt;/a-entity&gt;
+
+
+    &lt;!-- ========================= --&gt;
+    &lt;!-- **** 2 --&gt;
+    &lt;!-- ========================= --&gt;
+
+    &lt;a-entity mindar-image-target=&quot;targetIndex: 1&quot;&gt;
+
+        &lt;a-plane
+            position=&quot;0 0 0&quot;
+            width=&quot;1&quot;
+            height=&quot;0.6&quot;
+            color=&quot;blue&quot;&gt;
+        &lt;/a-plane&gt;
+
+    &lt;/a-entity&gt;
+
+&lt;/a-scene&gt;
+</code></pre>
+<div style="color: red">Prueba de Word a HTML - por favor <a href="https://wordtohtml.net/site/payment">Go PRO</a> para obtener el HTML completo.</div>

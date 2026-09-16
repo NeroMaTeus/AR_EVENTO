@@ -1,53 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AR Evento</title>
 
+    <!-- Librerías de A-Frame y MindAR -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-</head>
+  </head>
+  <body style="margin: 0px; overflow: hidden;">
+    
+    <a-scene 
+      mindar-image="imageTargetSrc: ./targets.mind;" 
+      color-space="sRGB" 
+      renderer="colorManagement: true, physicallyCorrectLights" 
+      vr-mode-ui="enabled: false" 
+      device-orientation-permission-ui="enabled: false">
 
-<body>
+      <!-- Carga de la imagen del cartel -->
+      <a-assets>
+        <img id="cartel1" src="./cartel1.png">
+      </a-assets>
+      
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-<a-scene
-    mindar-image="imageTargetSrc: ./targets.mind;"
-    color-space="sRGB"
-    renderer="colorManagement: true"
-    vr-mode-ui="enabled: false"
-    device-orientation-permission-ui="enabled: false">
+      <!-- Obra 1 (TargetIndex 0): Muestra el cartel de la imagen -->
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-plane src="#cartel1" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
+      </a-entity>
 
-    <a-camera
-        position="0 0 0"
-        look-controls="enabled: false">
-    </a-camera>
+      <!-- Obra 2 (TargetIndex 1): Muestra un cuadrado azul mientras tanto -->
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-plane position="0 0 0" width="1" height="0.6" color="blue"></a-plane>
+      </a-entity>
 
-    <a-entity mindar-image-target="targetIndex: 0">
-
-        <a-plane
-            position="0 0 0"
-            width="1"
-            height="0.6"
-            color="red">
-        </a-plane>
-
-    </a-entity>
-
-    <a-entity mindar-image-target="targetIndex: 1">
-
-        <a-plane
-            position="0 0 0"
-            width="1"
-            height="0.6"
-            color="blue">
-        </a-plane>
-
-    </a-entity>
-
-</a-scene>
-
-</body>
+    </a-scene>
+    
+  </body>
 </html>
